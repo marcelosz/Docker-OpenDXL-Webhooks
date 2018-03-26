@@ -1,2 +1,2 @@
 #!/bin/bash
-python /opt/REST2OpenDXL/api_server.py
+python /opt/OpenDXL-Webhooks/api_server.py
