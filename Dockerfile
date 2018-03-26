@@ -9,7 +9,7 @@ MAINTAINER Marcelo de Souza <marcelo_souza@mcafee.com>
 # Install core components
 RUN apt-get update && apt-get dist-upgrade -y && apt-get autoremove -y && apt-get clean
 #RUN apt-get install -y mysql-client curl gcc git gnupg-agent make python openssl redis-server sudo vim zip locales
-RUN apt-get install -y git python
+RUN apt-get install -y git python python-flask python-gunicorn
 RUN apt-get clean
 
 # Install application
