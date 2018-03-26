@@ -10,18 +10,16 @@ MAINTAINER Marcelo de Souza <marcelo_souza@mcafee.com>
 # Install core components
 RUN apt-get update && apt-get dist-upgrade -y && apt-get autoremove -y && apt-get clean
 #RUN apt-get install -y mysql-client curl gcc git gnupg-agent make python openssl redis-server sudo vim zip locales
-RUN apt-get install -y curl git make python
-RUN locale-gen en_US.UTF-8
-ENV LANG en_US.UTF-8
+RUN apt-get install -y git python
 
 #RUN apt-get install -y python-dev python-pip libxml2-dev libxslt1-dev zlib1g-dev python-setuptools
 #RUN apt-get install -y cron logrotate supervisor syslog-ng-core
 RUN apt-get clean
 
 # Install application
-WORKDIR /opt
+WORKDIR /opt/
 #RUN apt-get install -y python3 python3-pip libjpeg-dev
-#RUN git clone https://github.com/MISP/misp-modules.git
+RUN git clone https://github.com/marcelosz/REST2OpenDXL.git
 #WORKDIR /opt/misp-modules
 #RUN pip3 install --upgrade --ignore-installed urllib3
 #RUN pip3 install --upgrade --ignore-installed requests
