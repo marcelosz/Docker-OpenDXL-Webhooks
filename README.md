@@ -1,2 +1,2 @@
-# Docker-REST2OpenDXL
-Repository for marcelosz/REST2OpenDXL Dockerfile and auxiliary files.
+# Docker-OpenDXL-Webhooks
+Repository for OpenDXL-Webhooks Dockerfile and auxiliary files.
