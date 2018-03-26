@@ -1,2 +1,2 @@
 #!/bin/bash
-python /opt/OpenDXL-Webhooks/api_server.py
+python /opt/OpenDXL-Webhooks/webhooks_server.py
