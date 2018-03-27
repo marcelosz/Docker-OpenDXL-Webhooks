@@ -4,15 +4,15 @@
 # 2018/03/26 - First release
 #
 FROM ubuntu:xenial
-MAINTAINER Marcelo de Souza <Marcelo_Souza@McAfee.com>
 
 # Install core components
 RUN apt-get update && apt-get dist-upgrade -y && apt-get autoremove -y && apt-get clean
-RUN apt-get install -y git python python-flask python-flask_restful python-gunicorn
+RUN apt-get install -y git python python-pip python-flask python-gunicorn
 RUN apt-get clean
 
 # Install application
 WORKDIR /opt/
+pip install flask_restful
 RUN git clone https://github.com/marcelosz/OpenDXL-Webhooks.git
 ADD run.sh /run.sh
 RUN chmod 0755 /run.sh
