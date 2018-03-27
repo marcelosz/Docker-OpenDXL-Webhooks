@@ -12,7 +12,7 @@ RUN apt-get clean
 
 # Install application
 WORKDIR /opt/
-pip install flask_restful
+RUN pip install flask_restful
 RUN git clone https://github.com/marcelosz/OpenDXL-Webhooks.git
 ADD run.sh /run.sh
 RUN chmod 0755 /run.sh
