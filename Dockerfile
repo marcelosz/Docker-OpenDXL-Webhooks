@@ -7,7 +7,7 @@ FROM ubuntu:xenial
 
 # Install core components
 RUN apt-get update && apt-get dist-upgrade -y && apt-get autoremove -y && apt-get clean
-RUN apt-get install -y git python python-pip
+RUN apt-get install -y git python python-pip wget
 RUN apt-get clean
 
 # Install application
