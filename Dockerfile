@@ -14,7 +14,8 @@ RUN apt-get clean
 WORKDIR /opt/
 RUN pip install cherrypy
 RUN wget https://github.com/opendxl/opendxl-client-python/releases/download/4.0.0.417/dxlclient-python-sdk-4.0.0.417.zip
-RUN pip install dxlclient-python-sdk-4.0.0.417.zip
+RUN unzip dxlclient-python-sdk-4.0.0.417.zip
+RUN pip install dxlclient-python-sdk-4.0.0.417/setup.py
 RUN git clone https://github.com/marcelosz/OpenDXL-Webhooks.git
 ADD run.sh /run.sh
 RUN chmod 0755 /run.sh
