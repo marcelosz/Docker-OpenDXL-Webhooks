@@ -2,6 +2,7 @@
 # Dockerfile
 #
 # 2018/03/26 - First release
+# 2018/04/06 - Minor changes
 #
 FROM ubuntu:xenial
 
