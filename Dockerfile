@@ -23,4 +23,5 @@ ADD run.sh /run.sh
 RUN chmod 0755 /run.sh
 
 EXPOSE 8001
+
 ENTRYPOINT ["/run.sh"]
