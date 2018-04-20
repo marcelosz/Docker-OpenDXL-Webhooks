@@ -24,5 +24,6 @@ ADD run.sh /run.sh
 RUN chmod 0755 /run.sh
 
 EXPOSE 8001
+VOLUME /opt/OpenDXL-Webhooks/conf
 
 ENTRYPOINT ["/run.sh"]
