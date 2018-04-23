@@ -9,6 +9,7 @@ FROM alpine:3.7
 
 # Install core components
 RUN apk add --update \
+    bash \
     python \
     python-dev \
     py-pip \
