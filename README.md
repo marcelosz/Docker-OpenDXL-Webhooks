@@ -3,7 +3,7 @@
 Introduction
 ============
 
-This repository contains files related to the OpenDXL Webhooks Server app (https://github.com/marcelosz/OpenDXL-Webhooks). The Docker image can be used as an alternative to installing a Python environment with the modules required for the OpenDXL Webhooks Server.
+This repository contains files related to the [OpenDXL Webhooks Server](https://github.com/marcelosz/OpenDXL-Webhooks) app. The Docker image can be used as an alternative to installing a Python environment with the modules required for the OpenDXL Webhooks Server.
 
 The remainder of this page walks through the steps required to configure the app, pull an image from the repository and run the app via a Docker container.
 
@@ -31,7 +31,7 @@ The next step is to pull the image from the Docker repository. That can be done 
 
 After pulling the image, the final step is to create a Docker container. The following Docker command can be used:
 
-> docker run -d --name opendxl-webhooks -p `<host-console-port>`:8001 -v `<host-config-dir>`:/opt/OpenDXL-Webhooks/conf -e LOG_LEVEL='`<log-level>` marcelosz/opendxl-webhooks:`<release-version>`
+> docker run -d --name opendxl-webhooks -p `<host-console-port>`:8001 -v `<host-config-dir>`:/opt/OpenDXL-Webhooks/conf -e LOG_LEVEL='`<log-level>`' marcelosz/opendxl-webhooks:`<release-version>`
 
 The following parameters must be specified:
 
