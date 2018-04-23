@@ -8,19 +8,27 @@
 FROM alpine:3.7
 
 # Install core components
-RUN apt-get update && apt-get dist-upgrade -y && apt-get autoremove -y && apt-get clean
-RUN apt-get install -y git python python-pip wget unzip
-RUN apt-get clean
+RUN apk add --update \
+    python \
+    python-dev \
+    py-pip \
+    build-base \
+    git \
+  && pip install --upgrade pip \
+  && rm -rf /var/cache/apk/*
 
 # Install application
 WORKDIR /opt/
 RUN pip install cherrypy
-RUN git clone https://github.com/marcelosz/OpenDXL-Webhooks.git
-RUN wget https://github.com/opendxl/opendxl-client-python/releases/download/4.0.0.417/dxlclient-python-sdk-4.0.0.417.zip
-RUN unzip dxlclient-python-sdk-4.0.0.417.zip
+RUN wget https://github.com/marcelosz/OpenDXL-Webhooks/releases/download/v1.0-beta.1/OpenDXL-Webhooks-1.0-beta.1.zip \
+    && unzip OpenDXL-Webhooks-1.0-beta.1.zip \ 
+    && mv OpenDXL-Webhooks-1.0-beta.1 OpenDXL-Webhooks
+RUN wget https://github.com/opendxl/opendxl-client-python/releases/download/4.0.0.417/dxlclient-python-sdk-4.0.0.417.zip \
+    && unzip dxlclient-python-sdk-4.0.0.417.zip
 WORKDIR /opt/dxlclient-python-sdk-4.0.0.417
 RUN pip install lib/dxlclient-4.0.0.417.zip
 WORKDIR /opt/OpenDXL-Webhooks
+RUN git clone https://github.com/marcelosz/opendxl_util.git
 ADD run.sh /run.sh
 RUN chmod 0755 /run.sh
 
