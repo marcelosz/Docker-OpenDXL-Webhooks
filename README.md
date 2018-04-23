@@ -43,6 +43,6 @@ The following parameters must be specified:
 
 For example:
 
-> docker run -d --name opendxl-webhooks -p 8001:8001 -v /opt/webhooks-config:/opt/OpenDXL-Webhooks/conf marcelosz/opendxl-webhooks:latest``
+> docker run -d --name opendxl-webhooks -p 8001:8001 -v /opt/webhooks-config:/opt/OpenDXL-Webhooks/conf marcelosz/opendxl-webhooks:latest
 
 **Note**: A restart policy can be specified via the `--restart <policy>` flag. This flag can be used to restart the container when the system reboots or if the service terminates abnormally. The `unless-stopped` policy will restart the container unless it has been explicitly stopped.
