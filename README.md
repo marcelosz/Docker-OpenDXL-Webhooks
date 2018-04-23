@@ -1,4 +1,4 @@
-# OpenDXL Webhooks Docker Image
+# OpenDXL Webhooks Server - Docker Repository
 
 Introduction
 ---------------------
