@@ -10,7 +10,14 @@ The remainder of this page walks through the steps required to configure the app
 Configuration
 =============
 
-TODO
+The first step is to connect to the host that is running Docker and configure the app. All configuration files that are required by the app will reside on the host system and be made available to the Docker container via a data volume.
+
+Once you have logged into the host system, perform the following steps:
+
+1.) Create a directory to contain the configuration files (ex.: /opt/webhooks-config)
+2.) Add the configuration files for the app into that directory. Sample configuration files can be downloaded from https://github.com/marcelosz/OpenDXL-Webhooks/tree/master/conf.
+4.) Create a directory under 'webhooks-config' called 'dxlconfig'
+5.) Copy OpenDXL configuration files into that new directory
 
 Run
 ===
