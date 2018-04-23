@@ -3,8 +3,9 @@
 #
 # 2018/03/26 - First release
 # 2018/04/06 - Minor changes
+# 2018/04/23 - Major changes (now using Alpine as base image)
 #
-FROM ubuntu:xenial
+FROM alpine:3.7
 
 # Install core components
 RUN apt-get update && apt-get dist-upgrade -y && apt-get autoremove -y && apt-get clean
