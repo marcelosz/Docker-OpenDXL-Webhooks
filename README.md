@@ -36,10 +36,13 @@ After pulling the image, the final step is to create a Docker container. The fol
 The following parameters must be specified:
 
 **host-console-port:** The port used to access the OpenDXL Console via the host system
+
 **host-config-dir:** The directory on the host that contains the console configuration files
+
 **release-version:** The version of the image (See "Pull Docker Image" section above)
 
 For example:
+
 `docker run -d --name opendxl-webhooks -p 8001:8001 -v /opt/webhooks-config:/opt/OpenDXL-Webhooks/conf marcelosz/opendxl-webhooks:latest`
 
 **Note**: A restart policy can be specified via the restart flag (`--restart <policy>`). This flag can be used to restart the container when the system reboots or if the service terminates abnormally. The `unless-stopped` policy will restart the container unless it has been explicitly stopped.
