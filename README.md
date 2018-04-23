@@ -35,11 +35,11 @@ After pulling the image, the final step is to create a Docker container. The fol
 
 The following parameters must be specified:
 
-**host-console-port:** The port used to access the OpenDXL Console via the host system
+`host-console-port`: The port used to access the OpenDXL Console via the host system
 
-**host-config-dir:** The directory on the host that contains the console configuration files
+`host-config-dir`: The directory on the host that contains the console configuration files
 
-**release-version:** The version of the image (See "Pull Docker Image" section above)
+`release-version`: The version of the image (See "Pull Docker Image" section above)
 
 For example:
 
