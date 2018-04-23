@@ -31,7 +31,7 @@ The next step is to pull the image from the Docker repository. That can be done 
 
 After pulling the image, the final step is to create a Docker container. The following Docker command can be used:
 
-``docker run -d --name opendxl-webhooks -p <host-console-port>:8001 -v <host-config-dir>:/opt/OpenDXL-Webhooks/conf marcelosz/opendxl-webhooks:<release-version>``
+> docker run -d --name opendxl-webhooks -p <host-console-port>:8001 -v <host-config-dir>:/opt/OpenDXL-Webhooks/conf marcelosz/opendxl-webhooks:<release-version>
 
 The following parameters must be specified:
 
@@ -43,6 +43,6 @@ The following parameters must be specified:
 
 For example:
 
-``docker run -d --name opendxl-webhooks -p 8001:8001 -v /opt/webhooks-config:/opt/OpenDXL-Webhooks/conf marcelosz/opendxl-webhooks:latest``
+> docker run -d --name opendxl-webhooks -p 8001:8001 -v /opt/webhooks-config:/opt/OpenDXL-Webhooks/conf marcelosz/opendxl-webhooks:latest``
 
-**Note**: A restart policy can be specified via the restart flag (`--restart <policy>`). This flag can be used to restart the container when the system reboots or if the service terminates abnormally. The `unless-stopped` policy will restart the container unless it has been explicitly stopped.
+**Note**: A restart policy can be specified via the `--restart <policy>` flag. This flag can be used to restart the container when the system reboots or if the service terminates abnormally. The `unless-stopped` policy will restart the container unless it has been explicitly stopped.
