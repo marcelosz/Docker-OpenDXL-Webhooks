@@ -16,7 +16,7 @@ Once you have logged into the host system, perform the following steps:
 
 1. Create a directory to contain the configuration files (ex.: /opt/webhooks-config)
 
-2. Add the configuration files for the app into that directory. Sample configuration files can be downloaded from https://github.com/marcelosz/OpenDXL-Webhooks/tree/master/conf.
+2. Add the configuration files for the app into that directory. Sample configuration files can be downloaded [here](https://github.com/marcelosz/OpenDXL-Webhooks/tree/master/conf).
 
 3. Create a directory under 'webhooks-config' called 'dxlconfig'.
 
