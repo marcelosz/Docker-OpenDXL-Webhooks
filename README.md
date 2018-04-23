@@ -18,10 +18,41 @@ Once you have logged into the host system, perform the following steps:
 
 2. Add the configuration files for the app into that directory. Sample configuration files can be downloaded from https://github.com/marcelosz/OpenDXL-Webhooks/tree/master/conf.
 
-3. Create a directory under 'webhooks-config' called 'dxlconfig'
+3. Create a directory under 'webhooks-config' called 'dxlconfig'.
 
-4. Copy OpenDXL configuration files into that new directory
+4. Copy OpenDXL configuration files into that new directory.
 
 Run
 ===
+
 docker run -d --name dxlconsole -p <host-console-port>:8443 -v <host-config-dir>:/opt/dxlconsole-config opendxl/opendxl-console:<release-version>
+
+Pull Docker Image¶
+The next step is to pull the OpenDXL Console image from the Docker repository.
+
+The image can be pulled using the following Docker command:
+
+docker pull opendxl/opendxl-console:<release-version>
+
+The following parameters must be specified:
+
+release-version The release version of the OpenDXL Console
+For example:
+
+docker pull opendxl/opendxl-console:0.1.3
+Create Docker Container
+The final step is to create a Docker container based on the pulled image.
+
+The container can be created using the following Docker command:
+
+docker run -d --name dxlconsole -p <host-console-port>:8443 -v <host-config-dir>:/opt/dxlconsole-config opendxl/opendxl-console:<release-version>
+
+The following parameters must be specified:
+
+host-console-port The port used to access the OpenDXL Console via the host system
+host-config-dir The directory on the host that contains the console configuration files
+release-version The version of the image (See "Pull Docker Image" section above)
+For example:
+
+docker run -d --name dxlconsole -p 8443:8443 -v /home/myuser/dxlconsole-config:/opt/dxlconsole-config opendxl/opendxl-console:0.1.3
+Note: A restart policy can be specified via the restart flag (--restart <policy>). This flag can be used to restart the container when the system reboots or if the service terminates abnormally. The unless-stopped policy will restart the container unless it has been explicitly stopped.
