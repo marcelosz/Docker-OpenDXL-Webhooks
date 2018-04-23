@@ -3,9 +3,7 @@
 Introduction
 ---------------------
 
-This pre-built Docker image can be used as an alternative to installing a Python environment with the modules required for the OpenDXL Webhooks server. The image is based on the following Dockerfile repository: 
-
-`<https://github.com/marcelosz/Docker-OpenDXL-Webhooks>`
+This repository contains files related to the OpenDXL Webhooks Server (https://github.com/marcelosz/OpenDXL-Webhooks). The Docker image can be used as an alternative to installing a Python environment with the modules required for the OpenDXL Webhooks Server.
 
 The remainder of this page walks through the steps required to configure the app, pull the image from the repository, and run the app via a Docker container.
 
