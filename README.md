@@ -31,13 +31,15 @@ The next step is to pull the image from the Docker repository. That can be done 
 
 After pulling the image, the final step is to create a Docker container. The following Docker command can be used:
 
-> docker run -d --name opendxl-webhooks -p `<host-console-port>`:8001 -v `<host-config-dir>`:/opt/OpenDXL-Webhooks/conf marcelosz/opendxl-webhooks:`<release-version>`
+> docker run -d --name opendxl-webhooks -p `<host-console-port>`:8001 -v `<host-config-dir>`:/opt/OpenDXL-Webhooks/conf -e LOG_LEVEL='`<log-level>` marcelosz/opendxl-webhooks:`<release-version>`
 
 The following parameters must be specified:
 
 `host-console-port`: The port used to access the OpenDXL Console via the host system
 
 `host-config-dir`: The directory on the host that contains the console configuration files
+
+`log-level`: The desired level of logging for OpenDXL Webhooks Server (DEBUG, INFO or ERROR)
 
 `release-version`: The version of the image (See "Pull Docker Image" section above)
 
