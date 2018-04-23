@@ -27,7 +27,7 @@ Downloading and Running
 
 The next step is to pull the image from the Docker repository. That can be done using the following Docker command:
 
-`docker pull marcelosz/opendxl-webhooks:latest`
+> docker pull marcelosz/opendxl-webhooks:latest
 
 After pulling the image, the final step is to create a Docker container. The following Docker command can be used:
 
